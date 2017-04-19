@@ -9,31 +9,31 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void match_if_hand_contains_two_same_cards()
 		{
-			var a_single_pair_hand = HandConverter.CreateHand("Kd Qd Kc 7s 8h");
+			var hand = HandConverter.CreateHand("Kd Qd Kc 7s 8h");
 			
 			var singlePair = new SinglePair();
 
-			Check.That(singlePair.Match(a_single_pair_hand)).IsTrue();
+			Check.That(singlePair.Match(hand)).IsTrue();
 		}
 
 		[TestMethod]
 		public void match_if_hand_contains_three_same_cards()
 		{
-			var a_single_pair_hand = HandConverter.CreateHand("Kd Kd Kc 7s 8h");
+			var hand = HandConverter.CreateHand("Kd Kd Kc 7s 8h");
 
 			var singlePair = new SinglePair();
 
-			Check.That(singlePair.Match(a_single_pair_hand)).IsFalse();
+			Check.That(singlePair.Match(hand)).IsFalse();
 		}
 
 		[TestMethod]
 		public void match_if_hand_contains_two_pairs()
 		{
-			var a_single_pair_hand = HandConverter.CreateHand("Kd Qd Kc 7s Qh");
+			var hand = HandConverter.CreateHand("Kd Qd Kc 7s Qh");
 
 			var singlePair = new SinglePair();
 
-			Check.That(singlePair.Match(a_single_pair_hand)).IsFalse();
+			Check.That(singlePair.Match(hand)).IsFalse();
 		}
 
 		[TestMethod]
