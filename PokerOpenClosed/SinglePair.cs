@@ -6,7 +6,7 @@ namespace PokerOpenClosed
 	{
 		public bool Match(Hand hand)
 		{
-			return hand.Cards.GroupBy( c => c.CardValue).Count( g => g.Count() == 2) > 0;
+			return hand.Cards.GroupBy( c => c.CardValue).Count( g => g.Count() == 2) == 1;
 		}
 	}
 }
