@@ -9,9 +9,9 @@ namespace PokerOpenClosed
 			return hand.Cards.GroupBy( c => c.CardValue).Count( g => g.Count() == 2) == 1;
 		}
 
-		public CardValue Rank(Hand oneHand)
+		public CardValue Rank(Hand hand)
 		{
-			throw new System.NotImplementedException();
+			return hand.Cards.GroupBy(c => c.CardValue).First(g => g.Count() == 2).Key;
 		}
 	}
 }
