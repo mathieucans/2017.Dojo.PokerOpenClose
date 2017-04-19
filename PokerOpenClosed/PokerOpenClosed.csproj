@@ -61,6 +61,7 @@
     <Compile Include="CardConverter.cs" />
     <Compile Include="CardValue.cs" />
     <Compile Include="Hand.cs" />
+    <Compile Include="HandConverter.cs" />
     <Compile Include="HighCard.cs" />
     <Compile Include="ICombinaison.cs" />
     <Compile Include="PokerSlover.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="PokerSloverShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinglePair.cs" />
+    <Compile Include="SinglePairShould.cs" />
     <Compile Include="Winner.cs" />
   </ItemGroup>
   <Choose>

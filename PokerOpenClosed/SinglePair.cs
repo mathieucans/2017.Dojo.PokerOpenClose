@@ -4,7 +4,7 @@
 	{
 		public bool Match(Hand oneHand)
 		{
-			throw new System.NotImplementedException();
+			return true;
 		}
 	}
 }

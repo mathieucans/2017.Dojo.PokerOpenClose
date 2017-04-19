@@ -6,7 +6,7 @@ namespace PokerOpenClosed
 {
 	public class PokerSlover
 	{
-		private List<ICombinaison> _combinaisonOrder;
+		private readonly List<ICombinaison> _combinaisonOrder;
 
 		public PokerSlover(IEnumerable<ICombinaison> combinaisonOrder)
 		{
