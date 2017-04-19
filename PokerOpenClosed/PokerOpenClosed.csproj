@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\FakeItEasy\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="NFluent">
       <HintPath>..\NFluent.1.3.1.0\lib\portable-net45+sl5+netcore45+MonoAndroid1+MonoTouch1\NFluent.dll</HintPath>
     </Reference>
@@ -60,6 +63,7 @@
     <Compile Include="Hand.cs" />
     <Compile Include="PokerSlover.cs" />
     <Compile Include="PokerAceptanceTest.cs" />
+    <Compile Include="PokerSloverShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Winner.cs" />
   </ItemGroup>
