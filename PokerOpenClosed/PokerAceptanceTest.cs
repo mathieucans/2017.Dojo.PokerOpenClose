@@ -27,20 +27,4 @@ namespace PokerOpenClosed
 			return new Hand(cards);
 		}
 	}
-
-	public class SinglePair : ICombinaison
-	{
-		public bool Match(Hand oneHand)
-		{
-			throw new System.NotImplementedException();
-		}
-	}
-
-	public class HighCard : ICombinaison
-	{
-		public bool Match(Hand oneHand)
-		{
-			throw new System.NotImplementedException();
-		}
-	}
 }

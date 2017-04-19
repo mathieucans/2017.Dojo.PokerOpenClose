@@ -24,10 +24,4 @@ namespace PokerOpenClosed
 			Check.That(winner.WinnerHand).Equals(oneHand);
 		}		
 	}
-
-	public interface ICombinaison
-	{
-		bool Match(Hand oneHand);
-	}
-
 }
