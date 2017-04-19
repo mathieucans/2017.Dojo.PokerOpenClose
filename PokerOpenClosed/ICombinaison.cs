@@ -2,6 +2,6 @@
 {
 	public interface ICombinaison
 	{
-		bool Match(Hand oneHand);
+		bool Match(Hand hand);
 	}
 }

@@ -10,8 +10,7 @@ namespace PokerOpenClosed
 		public void match_if_hand_contains_two_same_cards()
 		{
 			var a_single_pair_hand = HandConverter.CreateHand("Kd Qd Kc 7s 8h");
-
-
+			
 			var singlePair = new SinglePair();
 
 			Check.That(singlePair.Match(a_single_pair_hand)).IsTrue();

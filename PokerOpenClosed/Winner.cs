@@ -7,6 +7,6 @@
 			WinnerHand = hand;
 		}
 
-		public Hand WinnerHand { get; set; }
+		public Hand WinnerHand { get; private set; }
 	}
 }

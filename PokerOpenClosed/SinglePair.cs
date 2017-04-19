@@ -1,10 +1,12 @@
-﻿namespace PokerOpenClosed
+﻿using System.Linq;
+
+namespace PokerOpenClosed
 {
 	public class SinglePair : ICombinaison
 	{
-		public bool Match(Hand oneHand)
+		public bool Match(Hand hand)
 		{
-			return true;
+			return hand.Cards.GroupBy( c => c.CardValue).Count( g => g.Count() == 2) > 0;
 		}
 	}
 }

@@ -17,7 +17,7 @@ namespace PokerOpenClosed
 
 			var result = poker.Slove(an_highcard_hand, a_single_pair_hand);
 
-			Check.That(result.WinnerHand).Equals(a_single_pair_hand);
+			Check.That(result.WinnerHand).Equals(a_single_pair_hand);			
 		}
 	}
 }
