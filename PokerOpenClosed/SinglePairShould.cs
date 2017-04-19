@@ -45,5 +45,15 @@ namespace PokerOpenClosed
 
 			Check.That(singlePair.Match(hand)).IsFalse();
 		}
+
+		[TestMethod]
+		public void rank_should_equals_the_pair_value()
+		{
+			var hand = HandConverter.CreateHand("Kd Qd Tc Ts 7h");
+
+			var singlePair = new SinglePair();
+
+			Check.That(singlePair.Rank(hand)).Equals(CardValue.Ten);
+		}
 	}
 }
