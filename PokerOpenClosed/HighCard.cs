@@ -6,5 +6,10 @@
 		{
 			return true;
 		}
+
+		public CardValue Rank(Hand oneHand)
+		{
+			return CardValue.Height;
+		}
 	}
 }

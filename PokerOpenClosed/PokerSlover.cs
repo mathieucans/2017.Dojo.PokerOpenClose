@@ -38,8 +38,18 @@ namespace PokerOpenClosed
 
 			public int CompareTo(object obj)
 			{
-				return _combinaisonOrder.IndexOf(((HandAndCombinaison)obj).Combinaison).CompareTo(
-					_combinaisonOrder.IndexOf(Combinaison));
+				var other = ((HandAndCombinaison)obj);
+				var otherIndex = _combinaisonOrder.IndexOf(other.Combinaison);
+				var myIndex = _combinaisonOrder.IndexOf(Combinaison);
+				var result = otherIndex.CompareTo(
+					myIndex);
+				if (otherIndex == myIndex)
+				{
+					result = other.Combinaison.Rank(other.Hand).CompareTo(Combinaison.Rank(Hand));
+				}
+
+
+				return result;
 			}
 		}
 	}
