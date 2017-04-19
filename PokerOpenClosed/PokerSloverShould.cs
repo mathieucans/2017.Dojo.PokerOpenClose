@@ -12,10 +12,12 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void return_the_hands_that_has_the_greater_combinaison()
 		{
-			var cominaisonFinder = A.Fake<ICombinaisonFinder>();
+			var combinaisonOrder = A.CollectionOfFake<ICombinaison>(3);
 			var pokerSolver = new PokerSlover();
 			var oneHand = new Hand(A.Dummy<IEnumerable<Card>>());
 			var otherHand = new Hand(A.Dummy<IEnumerable<Card>>());
+			A.CallTo(() => combinaisonOrder[0].Match(oneHand)).Returns(true);
+			A.CallTo(() => combinaisonOrder[3].Match(otherHand)).Returns(true);
 			
 			var winner = pokerSolver.Slove(oneHand, otherHand);
 
@@ -23,7 +25,9 @@ namespace PokerOpenClosed
 		}		
 	}
 
-	public interface ICombinaisonFinder
+	public interface ICombinaison
 	{
+		bool Match(Hand oneHand);
 	}
+
 }
