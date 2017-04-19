@@ -17,7 +17,14 @@ namespace PokerOpenClosed
 
 			var result = poker.Slove(an_highcard_hand, a_single_pair_hand);
 
-			Check.That(result.WinnerHand).Equals(a_single_pair_hand);			
+			Check.That(result.WinnerHand).Equals(a_single_pair_hand);
+			Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with pair of kings");
+		}
+
+		private string MessageBuilder(Winner result)
+		{
+			return string.Format("{0} wins with pair of",
+				HandConverter.ConvertBack(result.WinnerHand));
 		}
 	}
 }

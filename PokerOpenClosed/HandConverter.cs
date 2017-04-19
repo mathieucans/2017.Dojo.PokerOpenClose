@@ -9,5 +9,10 @@ namespace PokerOpenClosed
 			var cards = cardstext.Split(' ').Select(s => CardConverter.Convert(s));
 			return new Hand(cards);
 		}
+
+		public static string ConvertBack(Hand hand)
+		{
+			return string.Join(" ", hand.Cards.Select(CardConverter.ConvertBack));
+		}
 	}
 }
