@@ -19,7 +19,7 @@ namespace PokerOpenClosed
 
 			var winningCombinaison = matchingCombinaisons.Max();
 
-			return new Winner(winningCombinaison.Hand);
+			return new Winner(winningCombinaison.Hand, winningCombinaison.Combinaison.Rank(winningCombinaison.Hand));
 		}
 
 		class HandAndCombinaison : IComparable

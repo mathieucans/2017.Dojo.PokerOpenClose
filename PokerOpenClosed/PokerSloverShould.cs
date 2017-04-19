@@ -18,7 +18,7 @@ namespace PokerOpenClosed
 			var otherHand = new Hand(A.Dummy<IEnumerable<Card>>());
 			A.CallTo(() => combinaisonOrder[0].Match(oneHand)).Returns(true);
 			A.CallTo(() => combinaisonOrder[2].Match(otherHand)).Returns(true);
-				
+
 			var winner = pokerSolver.Slove(oneHand, otherHand);
 
 			Check.That(winner.WinnerHand).Equals(oneHand);
@@ -39,6 +39,7 @@ namespace PokerOpenClosed
 			var winner = pokerSolver.Slove(oneHand, otherHand);
 
 			Check.That(winner.WinnerHand).Equals(otherHand);
-		}		
+			Check.That(winner.Rank).Equals(CardValue.Queen);
+		}
 	}
 }

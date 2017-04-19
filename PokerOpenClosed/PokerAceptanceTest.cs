@@ -18,7 +18,7 @@ namespace PokerOpenClosed
 			var result = poker.Slove(an_highcard_hand, a_single_pair_hand);
 
 			Check.That(result.WinnerHand).Equals(a_single_pair_hand);
-			Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with pair of kings");
+			Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with a pair of kings");
 		}
 
 		[TestMethod]
@@ -32,13 +32,14 @@ namespace PokerOpenClosed
 			var result = poker.Slove(a_single_pair_of_queens, a_single_pair_of_jacks);
 
 			Check.That(result.WinnerHand).Equals(a_single_pair_of_queens);
-			Check.That(MessageBuilder(result)).Equals("Qd Qc Kc 7s 8h wins with pair of queens");
+			Check.That(MessageBuilder(result)).Equals("Qd Qc Kc 7s 8h wins with a pair of queens");
 		}
 
 		private string MessageBuilder(Winner result)
 		{
-			return string.Format("{0} wins with pair of kings",
-				HandConverter.ConvertBack(result.WinnerHand));
+			return string.Format("{0} wins with a pair of {1}s",
+				HandConverter.ConvertBack(result.WinnerHand),
+				result.Rank.ToString().ToLower());
 		}
 	}
 }
