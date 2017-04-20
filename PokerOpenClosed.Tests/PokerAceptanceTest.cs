@@ -36,6 +36,21 @@ namespace PokerOpenClosed
 			Check.That(result.WinnerHand).Equals(a_single_pair_of_queens);
 			Check.That(MessageBuilder(result)).Equals("Qd Qc Kc 7s 8h wins with a pair of queens");
 		}
+		
+		[TestMethod]
+		public void a_single_pair_of_queen_with_an_king_wins_against_single_pair_of_quuen_hand_with_a_Jack()
+		{
+			var a_single_pair_with_a_jacks = HandConverter.CreateHand("Qh Qs Jc 9s 7h");
+			var a_single_pair_with_a_king = HandConverter.CreateHand("Qd Qc Kc 7s 8h");
+
+			var poker = new PokerSlover(_combinaisonOrder);
+
+			var result = poker.Slove(a_single_pair_with_a_jacks, a_single_pair_with_a_king);
+
+			Check.That(result.WinnerHand).Equals(a_single_pair_with_a_king);
+			Check.That(MessageBuilder(result)).Equals("Qd Qc Kc 7s 8h wins with a pair of queens");
+		}
+
 
 		private string MessageBuilder(Winner result)
 		{
