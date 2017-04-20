@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerOpenClosed.Tests", "PokerOpenClosed.Tests\PokerOpenClosed.Tests.csproj", "{10F6086B-3635-4E08-8A66-BBEF7CCC357A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerOpenCloseImpl", "PokerOpenCloseImpl\PokerOpenCloseImpl.csproj", "{04FFCDBB-A633-4AF5-8CB7-38D7E8216248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{10F6086B-3635-4E08-8A66-BBEF7CCC357A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10F6086B-3635-4E08-8A66-BBEF7CCC357A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10F6086B-3635-4E08-8A66-BBEF7CCC357A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FFCDBB-A633-4AF5-8CB7-38D7E8216248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FFCDBB-A633-4AF5-8CB7-38D7E8216248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FFCDBB-A633-4AF5-8CB7-38D7E8216248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FFCDBB-A633-4AF5-8CB7-38D7E8216248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

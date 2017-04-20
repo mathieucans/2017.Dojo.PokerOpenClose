@@ -7,13 +7,15 @@ namespace PokerOpenClosed
 	[TestClass]
 	public class PokerAceptanceTest
 	{
+		private ICombinaison[] _combinaisonOrder = new ICombinaison[]{new SinglePair(), new HighCard()};
+
 		[TestMethod]
 		public void a_single_pair_wins_against_an_highcard_hand()
 		{
 			var an_highcard_hand = HandConverter.CreateHand("Kd Qs Tc 9s 7h");
 			var a_single_pair_hand = HandConverter.CreateHand("Kd Qd Kc 7s 8h");
 
-			var poker = new PokerSlover(new ICombinaison[]{new SinglePair(), new HighCard()});
+			var poker = new PokerSlover(_combinaisonOrder);
 
 			var result = poker.Slove(an_highcard_hand, a_single_pair_hand);
 
@@ -27,7 +29,7 @@ namespace PokerOpenClosed
 			var a_single_pair_of_jacks = HandConverter.CreateHand("Kd Jd Jc 9s 7h");
 			var a_single_pair_of_queens = HandConverter.CreateHand("Qd Qc Kc 7s 8h");
 
-			var poker = new PokerSlover(new ICombinaison[] { new SinglePair(), new HighCard() });
+			var poker = new PokerSlover(_combinaisonOrder);
 
 			var result = poker.Slove(a_single_pair_of_queens, a_single_pair_of_jacks);
 
