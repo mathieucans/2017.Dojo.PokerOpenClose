@@ -1,4 +1,6 @@
-﻿namespace PokerOpenClosed
+﻿using System.Collections.Generic;
+
+namespace PokerOpenClosed
 {
 	public class HighCard : ICombinaison
 	{
@@ -7,9 +9,9 @@
 			return true;
 		}
 
-		public CardValue Rank(Hand oneHand)
+		public IEnumerable<CardValue> Rank(Hand oneHand)
 		{
-			return CardValue.Height;
+			return new [] {CardValue.Height};
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
 namespace PokerOpenClosed
@@ -53,7 +54,10 @@ namespace PokerOpenClosed
 
 			var singlePair = new SinglePair();
 
-			Check.That(singlePair.Rank(hand)).Equals(CardValue.Ten);
+			Check.That(singlePair.Rank(hand).First()).Equals(CardValue.Ten);
+
 		}
+
+
 	}
 }

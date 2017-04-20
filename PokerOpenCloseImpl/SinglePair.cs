@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace PokerOpenClosed
 {
@@ -9,9 +10,9 @@ namespace PokerOpenClosed
 			return hand.Cards.GroupBy( c => c.CardValue).Count( g => g.Count() == 2) == 1;
 		}
 
-		public CardValue Rank(Hand hand)
+		public IEnumerable<CardValue> Rank(Hand hand)
 		{
-			return hand.Cards.GroupBy(c => c.CardValue).First(g => g.Count() == 2).Key;
+			return new [] {(hand.Cards.GroupBy(c => c.CardValue).First(g => g.Count() == 2).Key)};
 		}
 	}
 }

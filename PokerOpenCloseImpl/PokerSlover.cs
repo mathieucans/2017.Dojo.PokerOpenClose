@@ -19,7 +19,7 @@ namespace PokerOpenClosed
 
 			var winningCombinaison = matchingCombinaisons.Max();
 
-			return new Winner(winningCombinaison.Hand, winningCombinaison.Combinaison.Rank(winningCombinaison.Hand));
+			return new Winner(winningCombinaison.Hand, winningCombinaison.Combinaison.Rank(winningCombinaison.Hand).FirstOrDefault());
 		}
 
 		class HandAndCombinaison : IComparable
@@ -45,7 +45,7 @@ namespace PokerOpenClosed
 					myIndex);
 				if (otherIndex == myIndex)
 				{
-					result = other.Combinaison.Rank(other.Hand).CompareTo(Combinaison.Rank(Hand));
+					result = other.Combinaison.Rank(other.Hand).First().CompareTo(Combinaison.Rank(Hand).First());
 				}
 
 
