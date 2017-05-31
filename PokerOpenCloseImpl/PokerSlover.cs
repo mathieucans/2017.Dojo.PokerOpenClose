@@ -41,15 +41,32 @@ namespace PokerOpenClosed
 				var other = ((HandAndCombinaison)obj);
 				var otherIndex = _combinaisonOrder.IndexOf(other.Combinaison);
 				var myIndex = _combinaisonOrder.IndexOf(Combinaison);
-				var result = otherIndex.CompareTo(
-					myIndex);
-				if (otherIndex == myIndex)
-				{
-					result = other.Combinaison.Rank(other.Hand).First().CompareTo(Combinaison.Rank(Hand).First());
-				}
+			    var result = otherIndex.CompareTo(myIndex);
+			    if (result == 0)
+			    {
+                    var otherIt = other.Combinaison.Rank(other.Hand).GetEnumerator();
+                    var meIt = Combinaison.Rank(Hand).GetEnumerator();
+                    while (result == 0 && otherIt.MoveNext() && meIt.MoveNext())
+                    {
+                        result = otherIt.Current.CompareTo(meIt.Current);
+
+                    }
+                }
+                /*
+
+					result = 0;
+					var otherIt = other.Combinaison.Rank(other.Hand).GetEnumerator();
+					var meIt = Combinaison.Rank(Hand).GetEnumerator();
+					while (result == 0 && otherIt.MoveNext() && meIt.MoveNext())
+					{
+						result = otherIt.Current.CompareTo(meIt.Current);
+						
+					}
+
+				}*/
 
 
-				return result;
+                return result;
 			}
 		}
 	}

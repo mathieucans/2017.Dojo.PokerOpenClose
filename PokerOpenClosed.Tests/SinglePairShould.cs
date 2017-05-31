@@ -50,11 +50,11 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void rank_should_equals_the_pair_value()
 		{
-			var hand = HandConverter.CreateHand("Kd Qd Tc Ts 7h");
+			var hand = HandConverter.CreateHand("7h Kd Qd Tc Ts");
 
 			var singlePair = new SinglePair();
 
-			Check.That(singlePair.Rank(hand).First()).Equals(CardValue.Ten);
+			Check.That(singlePair.Rank(hand)).ContainsExactly(CardValue.Ten, CardValue.King, CardValue.Queen, CardValue.Seven);
 
 		}
 
