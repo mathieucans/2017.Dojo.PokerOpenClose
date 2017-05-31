@@ -30,6 +30,5 @@ namespace PokerOpenCloseImpl
                 .Select(g => g.Key).ToList();
             return listOfBrelanValues;
         }
-
     }
 }

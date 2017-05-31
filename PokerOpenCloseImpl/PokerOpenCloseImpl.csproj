@@ -45,6 +45,7 @@
     <Compile Include="CardsManipulation.cs" />
     <Compile Include="CardValue.cs" />
     <Compile Include="DoublePair.cs" />
+    <Compile Include="Flush.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="HighCard.cs" />
     <Compile Include="ICombinaison.cs" />

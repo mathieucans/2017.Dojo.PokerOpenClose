@@ -35,7 +35,6 @@ namespace PokerOpenClosed
             var singlePair = new DoublePair();
 
             Check.That(singlePair.Rank(hand)).ContainsExactly(CardValue.Ten, CardValue.Seven, CardValue.Queen);
-
         }
 
     }
