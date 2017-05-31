@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brelan.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardColor.cs" />
     <Compile Include="CardsManipulation.cs" />

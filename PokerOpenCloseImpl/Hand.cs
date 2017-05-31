@@ -12,11 +12,6 @@ namespace PokerOpenClosed
 			Cards = cards;
 		}
 
-	    public int CountAllPair()
-	    {
-	        return Cards.GroupBySameValue().SelectAllPair().Count();
-	    }
-
 	    public IList<CardValue> GetListOfDifferentValues()
 	    {
 	        var result = Cards.GroupBySameValue().Select(g => g.Key).ToList();
@@ -24,11 +19,5 @@ namespace PokerOpenClosed
 	        return result;
 	    }
 
-	    public IEnumerable<CardValue> GetListOfPairValues()
-	    {
-	        var listOfPairValues = Cards.GroupBySameValue().SelectAllPair().Select(g => g.Key).ToList();
-            listOfPairValues.Sort();
-	        return listOfPairValues;
-	    }
-	}
+    }
 }

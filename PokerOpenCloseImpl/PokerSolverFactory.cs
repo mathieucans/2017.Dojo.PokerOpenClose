@@ -6,6 +6,7 @@ namespace PokerOpenCloseImpl
     {
         private ICombinaison[] _combinaisonOrder =
         {
+            new Brelan(),
             new DoublePair(),
             new SinglePair(),
             new HighCard(),

@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using PokerOpenClosed;
-
-namespace PokerOpenCloseImpl
+﻿namespace PokerOpenCloseImpl
 {
     public class DoublePair : Pair
     {

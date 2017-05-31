@@ -66,7 +66,7 @@ namespace PokerOpenClosed
 	        //Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with a pair of queens and nine");
 	    }
 
-/*        [TestMethod]
+        [TestMethod]
         public void a_brelan_wins_against_double_pair_hand()
         {
             var brelan = HandStringConverter.CreateHand("Qd Qs Qc 9s 7h");
@@ -78,7 +78,7 @@ namespace PokerOpenClosed
             Check.That(result.WinnerHand).Equals(brelan);
             //Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with a pair of queens and nine");
         }
-        */
+        
 
         private string MessageBuilder(Winner result)
 		{
