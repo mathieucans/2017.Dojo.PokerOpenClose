@@ -39,21 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Brelan.cs" />
+    <Compile Include="Combinaison\Brelan.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardColor.cs" />
     <Compile Include="CardsManipulation.cs" />
     <Compile Include="CardValue.cs" />
-    <Compile Include="DoublePair.cs" />
-    <Compile Include="Full.cs" />
+    <Compile Include="Combinaison\DoublePair.cs" />
+    <Compile Include="Combinaison\Full.cs" />
     <Compile Include="Hand.cs" />
-    <Compile Include="HighCard.cs" />
-    <Compile Include="ICombinaison.cs" />
-    <Compile Include="Pair.cs" />
+    <Compile Include="Combinaison\HighCard.cs" />
+    <Compile Include="Combinaison\ICombinaison.cs" />
+    <Compile Include="Combinaison\Pair.cs" />
     <Compile Include="PokerSlover.cs" />
     <Compile Include="PokerSolverFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SinglePair.cs" />
+    <Compile Include="Combinaison\SinglePair.cs" />
     <Compile Include="Winner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

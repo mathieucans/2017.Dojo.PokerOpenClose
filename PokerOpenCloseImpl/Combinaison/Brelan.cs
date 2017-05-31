@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using PokerOpenClosed;
 
-namespace PokerOpenCloseImpl
+namespace PokerOpenCloseImpl.Combinaison
 {
     public class Brelan : ICombinaison
     {

@@ -1,4 +1,4 @@
-﻿namespace PokerOpenCloseImpl
+﻿namespace PokerOpenCloseImpl.Combinaison
 {
     public class DoublePair : Pair
     {

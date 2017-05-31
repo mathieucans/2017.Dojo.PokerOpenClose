@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace PokerOpenClosed
+namespace PokerOpenCloseImpl
 {
     public static class CardsManipulation
     {

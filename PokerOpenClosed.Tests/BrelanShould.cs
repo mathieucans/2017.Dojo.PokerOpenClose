@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 using PokerOpenCloseImpl;
+using PokerOpenCloseImpl.Combinaison;
 
 namespace PokerOpenClosed
 {

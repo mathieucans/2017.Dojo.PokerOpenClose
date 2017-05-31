@@ -1,4 +1,4 @@
-﻿namespace PokerOpenClosed
+﻿namespace PokerOpenCloseImpl
 {
 	public enum CardValue
 	{

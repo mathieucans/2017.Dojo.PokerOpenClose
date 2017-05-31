@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using PokerOpenClosed;
 
-namespace PokerOpenCloseImpl
+namespace PokerOpenCloseImpl.Combinaison
 {
     public class Full : ICombinaison
     {

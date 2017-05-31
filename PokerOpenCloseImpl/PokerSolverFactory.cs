@@ -1,4 +1,4 @@
-﻿using PokerOpenClosed;
+﻿using PokerOpenCloseImpl.Combinaison;
 
 namespace PokerOpenCloseImpl
 {
