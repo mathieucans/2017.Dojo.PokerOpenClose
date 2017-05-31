@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="CardColor.cs" />
+    <Compile Include="CardsManipulation.cs" />
     <Compile Include="CardValue.cs" />
     <Compile Include="DoublePair.cs" />
     <Compile Include="Hand.cs" />
