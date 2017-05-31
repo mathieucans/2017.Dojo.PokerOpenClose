@@ -2,17 +2,17 @@
 
 namespace PokerOpenClosed
 {
-	public class HandConverter
+	public class HandStringConverter
 	{
 		internal static Hand CreateHand(string cardstext)
 		{
-			var cards = cardstext.Split(' ').Select(s => CardConverter.Convert(s));
+			var cards = cardstext.Split(' ').Select(s => CardStringConverter.Convert(s));
 			return new Hand(cards);
 		}
 
 		public static string ConvertBack(Hand hand)
 		{
-			return string.Join(" ", hand.Cards.Select(CardConverter.ConvertBack));
+			return string.Join(" ", hand.Cards.Select(CardStringConverter.ConvertBack));
 		}
 	}
 }

@@ -56,8 +56,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CardConverter.cs" />
-    <Compile Include="HandConverter.cs" />
+    <Compile Include="CardStringConverter.cs" />
+    <Compile Include="DoublePairShould.cs" />
+    <Compile Include="HandStringConverter.cs" />
     <Compile Include="PokerAceptanceTest.cs" />
     <Compile Include="PokerSloverShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

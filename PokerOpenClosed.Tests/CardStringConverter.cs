@@ -4,7 +4,7 @@
 
 namespace PokerOpenClosed
 {
-	internal class CardConverter
+	internal class CardStringConverter
 	{
 		private static Dictionary<char, CardColor> _colors = new Dictionary<char, CardColor>
 		{

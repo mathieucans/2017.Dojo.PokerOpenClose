@@ -12,14 +12,14 @@ namespace PokerOpenClosed
 
 		public IEnumerable<CardValue> Rank(Hand hand)
 		{
-			var listOfKey = hand.Cards.GroupBy(c => c.CardValue).Select(g => g.Key).ToList();
+			var listOfDifferentCards = hand.Cards.GroupBy(c => c.CardValue).Select(g => g.Key).ToList();
 			var pairValue = (hand.Cards.GroupBy(c => c.CardValue).First(g => g.Count() == 2).Key);
-			listOfKey.Remove(pairValue);
-			listOfKey.Sort();
+			listOfDifferentCards.Remove(pairValue);
+			listOfDifferentCards.Sort();
 
 			var result = new List<CardValue>();
 			result.Add(pairValue);
-			result.AddRange(listOfKey);
+			result.AddRange(listOfDifferentCards);
 
 			return result;
 

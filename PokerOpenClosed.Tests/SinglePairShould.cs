@@ -1,16 +1,15 @@
-﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
 namespace PokerOpenClosed
 {
-	[TestClass]
+    [TestClass]
 	public class SinglePairShould
 	{
 		[TestMethod]
 		public void match_if_hand_contains_two_same_cards()
 		{
-			var hand = HandConverter.CreateHand("Kd Qd Kc 7s 8h");
+			var hand = HandStringConverter.CreateHand("Kd Qd Kc 7s 8h");
 			
 			var singlePair = new SinglePair();
 
@@ -20,7 +19,7 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void match_if_hand_contains_three_same_cards()
 		{
-			var hand = HandConverter.CreateHand("Kd Kd Kc 7s 8h");
+			var hand = HandStringConverter.CreateHand("Kd Kd Kc 7s 8h");
 
 			var singlePair = new SinglePair();
 
@@ -30,7 +29,7 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void match_if_hand_contains_two_pairs()
 		{
-			var hand = HandConverter.CreateHand("Kd Qd Kc 7s Qh");
+			var hand = HandStringConverter.CreateHand("Kd Qd Kc 7s Qh");
 
 			var singlePair = new SinglePair();
 
@@ -40,7 +39,7 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void dosent_match_if_hand_contains_no_same_cards()
 		{
-			var hand = HandConverter.CreateHand("Kd Qd Jc Ts 7h");
+			var hand = HandStringConverter.CreateHand("Kd Qd Jc Ts 7h");
 
 			var singlePair = new SinglePair();
 
@@ -50,7 +49,7 @@ namespace PokerOpenClosed
 		[TestMethod]
 		public void rank_should_equals_the_pair_value()
 		{
-			var hand = HandConverter.CreateHand("7h Kd Qd Tc Ts");
+			var hand = HandStringConverter.CreateHand("7h Kd Qd Tc Ts");
 
 			var singlePair = new SinglePair();
 
