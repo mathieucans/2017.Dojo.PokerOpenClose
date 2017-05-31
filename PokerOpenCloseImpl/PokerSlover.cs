@@ -38,33 +38,17 @@ namespace PokerOpenClosed
 
 			public int CompareTo(object obj)
 			{
-				var other = ((HandAndCombinaison)obj);
-				var otherIndex = _combinaisonOrder.IndexOf(other.Combinaison);
-				var myIndex = _combinaisonOrder.IndexOf(Combinaison);
-			    var result = otherIndex.CompareTo(myIndex);
-			    if (result == 0)
-			    {
-                    var otherIt = other.Combinaison.Rank(other.Hand).GetEnumerator();
-                    var meIt = Combinaison.Rank(Hand).GetEnumerator();
-                    while (result == 0 && otherIt.MoveNext() && meIt.MoveNext())
-                    {
-                        result = otherIt.Current.CompareTo(meIt.Current);
+				var otherHand = ((HandAndCombinaison)obj);
+				var otherHandIndex = _combinaisonOrder.IndexOf(otherHand.Combinaison);
+				var myHandIndex = _combinaisonOrder.IndexOf(Combinaison);
+			    var result = otherHandIndex.CompareTo(myHandIndex);
+                var otherRankIterator = otherHand.Combinaison.Rank(otherHand.Hand).GetEnumerator();
+                var myRankIterator = Combinaison.Rank(Hand).GetEnumerator();
+                while (result == 0 && otherRankIterator.MoveNext() && myRankIterator.MoveNext())
+                {
+                    result = otherRankIterator.Current.CompareTo(myRankIterator.Current);
 
-                    }
                 }
-                /*
-
-					result = 0;
-					var otherIt = other.Combinaison.Rank(other.Hand).GetEnumerator();
-					var meIt = Combinaison.Rank(Hand).GetEnumerator();
-					while (result == 0 && otherIt.MoveNext() && meIt.MoveNext())
-					{
-						result = otherIt.Current.CompareTo(meIt.Current);
-						
-					}
-
-				}*/
-
 
                 return result;
 			}

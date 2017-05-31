@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
 namespace PokerOpenClosed
@@ -7,7 +6,7 @@ namespace PokerOpenClosed
 	[TestClass]
 	public class PokerAceptanceTest
 	{
-		private ICombinaison[] _combinaisonOrder = new ICombinaison[]{new SinglePair(), new HighCard()};
+		private ICombinaison[] _combinaisonOrder = {new SinglePair(), new HighCard()};
 
 		[TestMethod]
 		public void a_single_pair_wins_against_an_highcard_hand()
