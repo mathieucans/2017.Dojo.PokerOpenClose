@@ -15,10 +15,9 @@ namespace PokerOpenClosed
 	    public int CountAllPair()
 	    {
 	        return Cards.GroupBySameValue().SelectAllPair().Count();
-
 	    }
 
-	    public IList<CardValue> GetListOfDifferentCardValues()
+	    public IList<CardValue> GetListOfDifferentValues()
 	    {
 	        var result = Cards.GroupBySameValue().Select(g => g.Key).ToList();
             result.Sort();

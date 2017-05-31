@@ -4,18 +4,10 @@ using PokerOpenClosed;
 
 namespace PokerOpenCloseImpl
 {
-    public class DoublePair : ICombinaison
+    public class DoublePair : Pair
     {
-        public bool Match(Hand hand)
+        public DoublePair() : base(2)
         {
-           return hand.CountAllPair() == 2;
-        }
-
-        public IEnumerable<CardValue> Rank(Hand hand)
-        {
-            var listOfDifferentCards = hand.GetListOfDifferentCardValues();
-            var listOfpairValue = hand.GetListOfPairValues();
-            return listOfpairValue.Concat(listOfDifferentCards.RemoveAll(listOfpairValue));
         }
     }
 }
