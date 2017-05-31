@@ -5,16 +5,16 @@ using PokerOpenCloseImpl;
 namespace PokerOpenClosed
 {
     [TestClass]
-    public class FlushShould
+    public class FullShould
     {
-        private Flush _flush = new Flush();
+        private Full _full = new Full();
 
         [TestMethod]
         public void match_if_cards_contains_three_same_cards_and_a_pair()
         {
             var hand = HandStringConverter.CreateHand("Ks Kd Kc Qs Qh");
 
-            Check.That(_flush.Match(hand)).IsTrue();
+            Check.That(_full.Match(hand)).IsTrue();
         }
 
         [TestMethod]
@@ -22,7 +22,7 @@ namespace PokerOpenClosed
         {
             var hand = HandStringConverter.CreateHand("Ks Kd Kc 7s Qh");
 
-            Check.That(_flush.Match(hand)).IsFalse();
+            Check.That(_full.Match(hand)).IsFalse();
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace PokerOpenClosed
         {
             var hand = HandStringConverter.CreateHand("7h 7d Td 7c Ts");
 
-            Check.That(_flush.Rank(hand)).ContainsExactly(CardValue.Seven, CardValue.Ten);
+            Check.That(_full.Rank(hand)).ContainsExactly(CardValue.Seven, CardValue.Ten);
 
         }
 

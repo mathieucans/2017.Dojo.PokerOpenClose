@@ -80,15 +80,15 @@ namespace PokerOpenClosed
         }
 
         [TestMethod]
-        public void a_quinte_flush_wins_against_brelan()
+        public void a_full_wins_against_brelan()
         {
             var brelan = HandStringConverter.CreateHand("Qd Qs Qc 9s 7h");
-            var flush = HandStringConverter.CreateHand("7d 7s 8c 8s 8h");
+            var full = HandStringConverter.CreateHand("7d 7s 8c 8s 8h");
             var poker = _pokerSolverFactory.CreatePokerSlover();
 
-            var result = poker.Slove(brelan, flush);
+            var result = poker.Slove(brelan, full);
 
-            Check.That(result.WinnerHand).Equals(flush);
+            Check.That(result.WinnerHand).Equals(full);
             //Check.That(MessageBuilder(result)).Equals("Kd Qd Kc 7s 8h wins with a pair of queens and nine");
         }
 

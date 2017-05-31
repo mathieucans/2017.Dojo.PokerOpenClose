@@ -3,12 +3,12 @@ using PokerOpenClosed;
 
 namespace PokerOpenCloseImpl
 {
-    public class Flush : ICombinaison
+    public class Full : ICombinaison
     {
         private Brelan _brelan;
         private SinglePair _pair;
 
-        public Flush()
+        public Full()
         {
             _brelan = new Brelan();
             _pair = new SinglePair();

@@ -59,7 +59,7 @@
     <Compile Include="BrelanShould.cs" />
     <Compile Include="CardStringConverter.cs" />
     <Compile Include="DoublePairShould.cs" />
-    <Compile Include="FlushShould.cs" />
+    <Compile Include="FullShould.cs" />
     <Compile Include="HandStringConverter.cs" />
     <Compile Include="PokerAceptanceTest.cs" />
     <Compile Include="PokerSloverShould.cs" />
